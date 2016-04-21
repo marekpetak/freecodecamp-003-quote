@@ -1,29 +1,36 @@
-<html>
+<html ng-app="App">
 
 <head>
 	   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
      <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css" rel="stylesheet" />
 		 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" / />
+		 <link href='https://fonts.googleapis.com/css?family=Tulpen+One' rel='stylesheet' type='text/css'>
      <link href="style.css" rel="stylesheet" />
 
      <title>a quote thingy</title>
 </head>
 
-<body>
+<body ng-controller="AppController">
 
 	<div class="quote-holder">
 		<div class="quote-holder-item quote-holder-item--fixed">
-			<div class="quote-holder-data">
-				<h3>Test</h3>
-				<p>{{quote.text}}</p>
+			<div class="quote-holder-data page-header">
+				<p class="text-center">{{quote.text}}</p>
 				<br />
-				<p>
-					{{quote.author}}
+				<p class="text-right">
+					-- {{quote.author}} --
 				</p>
+				<p class="text-right">
+					<button class="btn btn-lg btn-primary" ng-click="newQuote()">new</button>
+				</p>
+
 			</div>
 		</div>
 	</div>
 
+	<script src='bower_components/angular/angular.js'></script>
+
+	<script src="app.js"></script>
 </body>
 </html>
