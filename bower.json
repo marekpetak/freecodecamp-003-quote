@@ -1,0 +1,22 @@
+{
+  "name": "003_quote",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Marek Petak <marekpetak@kannegiesser.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.5"
+  }
+}

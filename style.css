@@ -1,8 +1,21 @@
 .quote-holder {
   display: flex;
-  flex-direction: row;;
-  flex-wrap: nowrap;
-  justify-content: center;
   align-items: center;
-  align-content: center;
+  min-height: 24em;
+  justify-content: center;
+}
+
+.quote-holder-item {
+  flex: 1;
+}
+
+.quote-holder-item--fixed {
+  flex: none;
+  max-width: 50%;
+}
+.quote-holder-data {
+  width: 100%;
+  padding: .8em 1em 0;
+  background: rgba(147,128,108,.1);
+  border-radius: 3px;
 }
