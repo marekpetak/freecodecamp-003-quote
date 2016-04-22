@@ -22,19 +22,31 @@
         }
       }
     ])
-    .service('DataService', [
-      function() {
+    .service('DataService', ['$http',
+      function($http) {
         var _dataServiceFactory = {};
 
         function _getQuote(callback) {
-          var test = {
-            text: "bla bla bla bla bla bla bla bla bla",
-            author: "Humpty Dumpty"
-          }
 
-          if(callback){
-            callback(test, null);
-          }
+          $http({
+            method: 'GET',
+            url: 'https://andruxnet-random-famous-quotes.p.mashape.com/?cat=',
+            headers: {
+              'X-Mashape-Key': 'OpJyf5G4TEmshtcqkiM7ewzowsikp1dJvHcjsnRdYleSwddNKI',
+              'Content-Type': 'application/x-www-form-urlencoded',
+              'Accept': 'application/json'
+            }
+          }).then(function(data) {
+
+            if(callback) {
+              var quote = {
+                text: data.data.quote,
+                author: data.data.author
+              }
+
+              callback(quote);
+            }
+          });
         }
 
         _dataServiceFactory.getQuote = _getQuote;
