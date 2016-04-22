@@ -20,13 +20,17 @@
 				<em>
 					<p class="text-center quote-text">{{quote.text}}</p>
 				</em>
-				<br />
 				<p class="text-right">
 					-- {{quote.author}} --
 				</p>
 				<p class="text-right">
 					<button class="btn btn-lg btn-primary" ng-click="newQuote()">new</button>
 				</p>
+
+				<p class="text-left social-icons">
+					<a href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text={{quote.text + ' ' + quote.author}}"><i class="fa fa-twitter-square fa-2x"></i></a>
+					<a href="https://plus.google.com"><i class="fa fa-google-plus-square fa-2x"></i></a>
+        </p>
 
 			</div>
 		</div>
