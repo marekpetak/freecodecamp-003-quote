@@ -20,6 +20,12 @@
               }
             });
         }
+
+        function init() {
+          $scope.newQuote();
+        }
+
+        init();
       }
     ])
     .service('DataService', ['$http',
